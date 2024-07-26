@@ -1,0 +1,49 @@
+.footer {
+    min-height: 82px;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        background-color: #0B1919;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 186px;
+    }
+    &__ico {
+        height: 24px;
+        cursor: pointer;
+        svg {
+            cursor: pointer;
+            fill: #899D9D;
+            transition: 0.3s all;
+            use {
+                cursor: pointer;
+            }
+            &:hover {
+                fill: $main-color;
+            }
+            &:active {
+                fill: #688B05;
+            }
+        }
+        &:focus {
+            outline: 1px solid $main-color;
+            outline-offset: 2px;
+        }
+    }
+    &__bottom {
+        padding-top: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 22px;
+        background-color: $second-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16.34px;
+        color: #899D9D;
+    }
+}

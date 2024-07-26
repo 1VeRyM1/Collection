@@ -1,0 +1,118 @@
+.artifact {
+    min-height: 570px;
+    padding: 60px 0;
+    background-color: $second-color;
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 255px;
+        gap: 30px;
+    }
+    &__post {
+        position: relative;
+        display: flex;
+        background-color: #0b1919;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        height: 495px;
+        img {
+            object-fit: cover;
+            scroll-snap-align: start;
+        }
+    }
+    &__card {
+        padding: 16px 16px 24px;
+        background-color: $main-color;
+    }
+    &__card-title {
+        font-family: Cormorant;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    &__card-text {
+        margin-bottom: 75px;
+    }
+    &__card-abs {
+        font-family: OpenSans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__next {
+        display: flex;
+        align-items: center;
+        width: 166px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: left;
+        color: #0B1919;
+        text-decoration: none;
+        transition: 0.3s all;
+        cursor: pointer;
+        svg {
+            fill: #0B1919;
+            transition: 0.3s all;
+            margin-left: 8px;
+            width: 42px;
+            height: 23px;
+            cursor: pointer;
+        }
+        &:focus-visible {
+            outline: 1px solid #0B1919;
+        }
+        &:hover {
+            color: #688B05;
+        }
+        &:hover svg{
+            fill: #688B05;
+        }
+    }
+    &__scroll {
+        position: absolute;
+        display: none;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: left;
+        color: #899D9D;
+        text-decoration: none;
+        left: 15px;
+        bottom: 16px;
+        svg {
+            fill: #899D9D;
+            margin-left: 8px;
+            width: 42px;
+            height: 23px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .artifact {
+        &__scroll {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .artifact {
+        padding: 60px 0 32px;
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import 'base/variables';
+@import 'fonts.scss';
+
+* {
+    font-family: 'OpenSans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: default;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 32px;
+    }
+}
+
+
+@import 'blocks/title.scss';
+@import 'blocks/header.scss';
+@import 'blocks/promo.scss';
+@import 'blocks/cards.scss';
+@import 'blocks/artifact.scss';
+@import 'blocks/support.scss';
+@import 'blocks/footer.scss';
